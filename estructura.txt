@@ -1,0 +1,19 @@
+- Portada con boton para dirigir a la verdadera página
+- Tecnología: React JS
+
+¿Qué debe contener?
+- menu 
+- Links: CV, Linkdln, email, telegram, github
+- mini portada
+- sobre mi
+- trabajos: Buscador de imagenes, starbucks (en proceso), turisteo (en proceso), cédula Python, e-commerce, algo que requiera APIs
+- tecnologias que manejo
+- traducción inglés/español
+
+- COLORES: OSCUROS
+- Link personalizado
+
+LOGO:
+- Lentes icon
+
+***Trabajos en React que debo realizar***
