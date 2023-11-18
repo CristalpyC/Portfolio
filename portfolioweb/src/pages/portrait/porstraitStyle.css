@@ -1,0 +1,90 @@
+#portrait{
+    margin: 8em 2em 2em 2em;
+    text-transform: uppercase;
+}
+
+.portrait__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.portrait__title{
+    color: #FFF;
+}
+
+.portrait__title h1{
+    font-weight: 400;
+    font-size: 12vmin;
+}
+
+.portrait__title span{
+    color: #6CC1C1;
+}
+
+.portrait__img img{
+    width: 35vw;
+    height: auto;
+}
+
+.portrait__btn{
+    margin-top: 5px;
+    background-color: transparent;
+    border: #6CC1C1 solid 5px;
+    padding: 10px;
+    font-size: 4vmin;
+    color: #FFF;
+    font-family: 'Odibee Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+.portrait__btn:hover{
+    box-shadow:  2px 5px 15px #48afaf;
+}
+
+@media screen and (max-width: 650px){
+    #portrait{
+        /*margin-top: 10rem;*/
+        text-align: center;
+    }
+    
+    .portrait__title h1{
+        font-size: 12vmin;
+    }
+
+    .portrait__btn{
+        font-size: 3vmin;
+    }
+}
+
+@media screen and (max-width: 450px){
+    .portrait__btn{
+        font-size: 5vmin;
+    }
+    .portrait__img img{
+        width: 45vw;
+    }
+}
+
+@media screen and (max-width: 814px){
+    #portrait{
+        text-align: center;
+    }
+    .portrait__container{
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (min-width: 820px) and (max-width: 1080px){
+    .portrait__container{
+        flex-direction: column-reverse;
+    }
+}
+
+
+/*@media screen and (max-width: 958px){
+    #portrait{
+        margin-top: 10rem;
+    }
+}*/
