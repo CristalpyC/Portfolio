@@ -1,0 +1,124 @@
+import { createContext } from "react";
+import { useState, useEffect } from "react";
+import PropTypes from 'prop-types';
+
+const LanguageContext = createContext();
+//const initialLanguage = 'en';
+const initialLanguage = localStorage.getItem('language') || 'en';
+
+const translations = {
+    en:{
+        menuTitle1: 'Home',
+        menuTitle2: 'About me',
+        menuTitle3: 'Works',
+        menuTitle4: 'Technologies',
+        portraitTitle1: `Hi! I'm`,
+        portraitTitle2: 'Cristal,',
+        portraitTitle3: 'Web developer',
+        portraitButton: 'Get to know me →',
+        homeTitle: 'Welcome to my site!',
+        countryTitle: 'Dominican Republic',
+        aboutTitle: `I'm a Frontend Developer stepping into Full-stack Development and Database Administration. I love creating nice-looking websites with HTML, CSS, and JavaScript or React JS. Now, I'm learning Django and Node.js to connect the frontend and backend. Also, I'm getting into databases to make apps work better.`,
+        aboutTitle2: `I enjoy learning and making cool stuff. Let's chat and build something awesome together!`,
+        goalTitle: 'Goal',
+        goalTitle2: 'Gain experience and knowledge.',
+        cvTitle: 'Download CV',
+        projectTitle: 'projects',
+        projectTitle1: 'Project 1',
+        projectTitle2: 'Project 2',
+        projectTitle3: 'Project 3',
+        projectTitle4: 'Project 4',
+        projectName1: 'Arcane',
+        projectName2: 'Travel app',
+        projectName3: 'Dominican identity app',
+        projectName4: 'Image search engine',
+        projectDesc1: `A collaborative work, where we decided to develop a friendly website based on a cinema. The user can watch the trailer of some movies, book a ticket or search for some snacks to order. We use HTML, CSS and JavaScript.`,
+        projectDesc2: `Turisteo is a platform for travelers that offers detailed information by country. This is a collaborative work, The backend team developed an API with details of all the countries, while in the FrontEnd team we take care of the design and integration of the resources. Currently, we are focused on hosting the application.`,
+        projectDesc3: `This incredible application, developed in Python, uses the tkinter library and an API with some details of Dominican citizens, helping users to obtain relevant information about the citizen, by searching for their ID.`,
+        projectView: 'View demo',
+        techTitle: 'Technologies',
+        footerTitle: 'All rights reserved',
+        errorMessage: 'Return',
+    }, 
+
+    es:{
+        menuTitle1: 'Inicio',
+        menuTitle2: 'Sobre mí',
+        menuTitle3: 'Trabajos',
+        menuTitle4: 'Tecnologías',
+        portraitTitle1: '¡Hola! Soy',
+        portraitTitle2: 'Cristal,',
+        portraitTitle3: 'Desarrolladora web',
+        portraitButton: 'Conoce más sobre mí →',
+        homeTitle: '¡Bienvenido a mi página!',
+        countryTitle: 'República Dominicana',
+        aboutTitle: `Me defino como una apasionada desarrolladora frontend que actualmente se aventura en el fascinante mundo del desarrollo full-stack y la gestión de bases de datos. Disfruto hacer sitios web dinámicos y atrayentes mediante la magia de HTML, CSS y JavaScript o React.Js. Estoy inmersa en la adquisición de habilidades en Django y Node.js para forjar conexiones fluidas entre el frontend y el backend.`,
+        aboutTitle2: `Disfruto aprender y hacer cosas interesantes. ¡Charlemos y construyamos algo increíble juntos!        `,
+        goalTitle: 'Meta',
+        goalTitle2: 'Ganar experiencia y conocimientos.',
+        cvTitle: 'Descarga mi CV',
+        projectTitle: 'proyectos',
+        projectTitle1: 'Proyecto 1',
+        projectTitle2: 'Proyecto 2',
+        projectTitle3: 'Proyecto 3',
+        projectTitle4: 'Proyecto 4',
+        projectName1: 'Arcane',
+        projectName2: 'App de viajes',
+        projectName3: 'App de cédulas dominicanas',
+        projectName4: 'Buscador de imágenes',
+        projectDesc1: `Un trabajo colaborativo, donde decidimos desarrollar un sitio web amigable basado en un cine. El usuario puede ver el avance de algunas películas, reservar un ticket o buscar algunos snacks para pedir. Usamos HTML, CSS y JavaScript.`,
+        projectDesc2: `Turisteo is a platform for travelers that offers detailed information by country. This is a collaborative work, The backend team developed an API with details of all the countries, while in the FrontEnd team we take care of the design and integration of the resources. Currently, we are focused on hosting the application.`,
+        projectDesc3: `Esta increíble aplicación, desarrollada en Python, utiliza la biblioteca tkinter y una API con algunos detalles de ciudadanos dominicanos, ayudando a los usuarios a obtener información relevante del ciudadano, mediante la busqueda de su cédula.`,
+        projectView: 'Ver demo',
+        techTitle: 'Tecnologías',
+        footerTitle: 'Todos los derechos reservados',
+        errorMessage: 'Retornar',
+    }
+}
+
+const LanguageProvider = ({children}) => {
+    const [language, setLanguage] = useState(initialLanguage);
+    const [texts, setTexts] = useState(translations[language]);
+
+    const handleLanguage = (e) => {
+        const selectedLanguage = e.target.value;
+        setLanguage(selectedLanguage);
+        setTexts(translations[selectedLanguage]);
+    
+        // Store the selected language in local storage
+        localStorage.setItem('language', selectedLanguage);
+      };
+
+    /*const handleLanguage = (e) => {
+        const selectedLanguage = e.target.value;
+
+        if (e.target.value === 'en'){
+            setLanguage('en');
+            setTexts(translations.en);
+        } else {
+            setLanguage('es');
+            setTexts(translations.es);
+        }
+    };*/
+
+    useEffect(() => {
+        // Retrieve the language from local storage when the component mounts
+        const storedLanguage = localStorage.getItem('language');
+        if (storedLanguage) {
+          setLanguage(storedLanguage);
+          setTexts(translations[storedLanguage]);
+        }
+      }, []);
+
+    const data = { texts, handleLanguage };
+    return (
+        <LanguageContext.Provider value={data}>{children}</LanguageContext.Provider>
+    );
+}
+
+export { LanguageProvider }
+export default LanguageContext;
+
+LanguageProvider.propTypes = {
+    children: PropTypes.any,
+};

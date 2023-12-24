@@ -1,0 +1,10 @@
+.logo__container img{
+    width: 10rem;
+    height: auto;
+}
+
+@media screen and (max-width: 220px){
+    .logo__container img{
+        width: 8rem;
+    }
+}

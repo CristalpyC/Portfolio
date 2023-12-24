@@ -1,0 +1,17 @@
+#footer__container{
+    background-color: #26252D;
+    color: #ffff;
+    font-size: 1.2rem;
+    font-family: 'Khand', sans-serif;
+    padding: 15px;
+    text-align: center;
+    white-space: nowrap;
+    border-top: solid 2px black;
+}
+
+@media screen and (max-width: 355px){
+    #footer__container{
+        font-size: 5vmin;
+    }
+}
+

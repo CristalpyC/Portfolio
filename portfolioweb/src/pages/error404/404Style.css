@@ -1,0 +1,52 @@
+#error__container{
+    display: flex;
+    justify-content: center;
+    background-color: #19181E;
+    flex-direction: column;
+}
+
+#error__container img{
+    margin: auto;
+    margin-bottom: 20px;
+    width: 50%;
+    height: auto;
+}
+
+#error__container button{
+    font-family: 'Odibee Sans', sans-serif;
+    text-transform: uppercase;
+    margin: auto;
+    width: 15rem;
+    font-size: 3vmin;
+    background-color: transparent;
+    color: white;
+    padding: 15px;
+    border: solid 5px #65B0B0;
+}
+
+#error__container button:hover{
+    box-shadow: 0px 5px 85px #285959;
+}
+
+@media screen and (max-width: 1050px){
+    #error__container{
+        margin-top: 5rem;
+    }
+}
+
+
+@media screen and (max-width: 650px){
+    #error__container button{
+        width: 8rem;
+    }
+
+    #error__container img{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 430px){
+    #error__container button{
+        font-size: 4vmin;
+    }
+}

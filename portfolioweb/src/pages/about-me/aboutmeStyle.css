@@ -1,0 +1,142 @@
+#about__container{
+    margin-top: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #19181E;
+    padding: 15px;
+    font-family: 'Khand', sans-serif;
+    margin-bottom: 15px;
+}
+
+.me__container{
+    color: #fff;
+    margin-left: 25px;
+}
+
+.me__container h2{
+    text-transform: uppercase;
+    /*font-size: 5vmin;*/
+    font-size: 3rem;
+    color: #6CC1C1;
+}
+
+.me__container hr{
+    margin-bottom: 15px;
+    border-color: #6CC1C1;;
+}
+
+.me__container p{
+    /*font-size: 3.5vmin;*/
+    font-size: 1.6rem;
+    font-weight: 100;
+    margin-bottom: 15px;
+}
+
+.me__container h3{
+    /*font-size: 3.5vmin;*/
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+}
+
+.me__container span{
+    font-weight: 400;
+}
+
+.me__container button{
+    text-transform: uppercase;
+    /*font-size: 2vmin;*/
+    font-size: 1rem;
+    border: none;
+    background-color: #65B0B0;
+    padding: 15px;
+    white-space: nowrap;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+}
+
+.me__container button:hover{
+    background-color: #508181;
+}
+
+.profilepic__container img{
+    box-shadow: 5px 5px 5px 0px rgba(108,193,193,0.75);
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(108,193,193,0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(108,193,193,0.75);
+    /*width: 35vw;*/
+    width: 34rem;
+    height: 28rem;/*28rem*/
+}
+
+.goal__icon{
+    color: #ffcf40;
+    margin-right: 3px;
+}
+
+@media screen and (max-width: 1080px){
+    #about__container{
+        flex-wrap: wrap;
+    }
+
+    .profilepic__container img{
+        border-radius: 85rem;
+        width: 24rem;
+        height: 25rem;
+        margin-bottom: 25px;
+    }
+}
+
+
+@media screen and (max-width: 426px){ /*426*/
+    #about__container{
+        flex-wrap: wrap;
+    }
+
+    .profilepic__container img{
+        width: 75vw; /*85vw*/
+        height: 35vh;
+    }
+
+    .me__container h2{
+        font-size: 2rem;
+        margin-bottom: 5px;
+    }
+
+    .me__container p,
+    .me__container h3{
+        font-size: 1.2rem;
+    }
+
+    .me__container button{
+        font-size: .8rem;
+    }
+}
+
+@media screen and (min-width: 850px) and (max-width: 1194px){
+    .profilepic__container img{
+        width: 25rem;
+    }
+
+    .me__container p,
+    .me__container h3{
+        font-size: 3.2vmin;
+    }
+
+    .me__container h2{
+        font-size: 7vmin;
+    }
+
+    .me__container button{
+        font-size: 2.3vmin;
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 321px){
+    .profilepic__container img{
+        width: 12rem;
+        height: 12rem;
+    }
+
+    
+}

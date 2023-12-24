@@ -16,4 +16,17 @@
 LOGO:
 - Lentes icon
 
+PROJECTS:
+- Arcane Cinema
+- Turisteo
+- Cedula dominicanas 
+- Buscador de imagenes (modificar, setLoading)
+- Starbucks (en proceso)
+- e-commerce
+
 ***Trabajos en React que debo realizar***
+- e-commerce
+
+
+CREAR LINKDELIN
+TERMINAR CV
