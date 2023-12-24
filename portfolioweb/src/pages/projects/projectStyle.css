@@ -37,6 +37,7 @@
 }
 
 .projectinfo__container h3{
+    white-space: nowrap;
     font-size: 2rem;
 }
 
@@ -74,6 +75,13 @@
 
 }
 
+@media screen and (max-width: 492px){
+    .projectinfo__container img{
+        width: 120%;
+    }
+
+}
+
 @media screen and (max-width: 462px){
     .project__title{
         font-size: 2.3rem;
@@ -85,11 +93,12 @@
     }
 
     .projectinfo__container p{
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
 
-    .demo__title{
+    .projectinfo__container .demo__title{
         margin-bottom: 25px;
+        font-size: 1.3rem;
     }
 
     .projectinfo__container h3{
@@ -121,3 +130,5 @@
         margin-left: 0;
     }
 }
+
+

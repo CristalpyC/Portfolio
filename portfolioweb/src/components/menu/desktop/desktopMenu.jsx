@@ -19,7 +19,6 @@ export const DesktopMenu = () => {
 
   const handleMenuOpen = () => {
     setMenu(!seeMenu);
-    
   }
 
   const handleLiClick = (itemName) => {
@@ -112,5 +111,5 @@ export const DesktopMenu = () => {
         </div>
     </header>
     </>
-  )
+  );
 }

@@ -15,3 +15,10 @@
     }
 }
 
+
+@media screen and (max-width: 427px){
+    #footer__container{
+        font-size: 4vmin;
+    }
+}
+
