@@ -86,8 +86,23 @@
     }
 }
 
+@media screen and (max-width: 650px){
+    .profilepic__container img{
+        width: 18rem;
+        height: 18rem;
+    }
 
-@media screen and (max-width: 426px){ /*426*/
+    .me__container h2{
+        font-size: 2.5rem;
+    }
+
+    .me__container p{
+        font-size: 1.5rem;
+    }
+}
+
+
+@media screen and (max-width: 426px){ 
     #about__container{
         flex-wrap: wrap;
     }
@@ -138,3 +153,4 @@
         height: 12rem;
     }
 }
+

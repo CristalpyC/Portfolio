@@ -57,7 +57,7 @@ export const Projects = () => {
                 <div>
                     <h2>{texts.projectTitle4}</h2>
                     <h3>{texts.projectName4}</h3>
-                    <p>{texts.projectDesc2}</p>
+                    <p>{texts.projectDesc4}</p>
                     <a href="https://youtu.be/XO6gH31xtRE"><p className='demo__title'>→ {texts.projectView}</p></a>
                 </div>
             </div>

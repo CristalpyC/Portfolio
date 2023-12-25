@@ -5,7 +5,7 @@
     right: 0;
     top: 0;   
     height: 100vh;
-    /*display: none;*/
+    width: 45%;
 }
 
 .invisible{
@@ -47,6 +47,18 @@
 
     .mobile__icon{
         margin-bottom: -4px;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .mobileMenu__container{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 350px){
+    .mobileMenu__container{
+        width: 45%;
     }
 }
 

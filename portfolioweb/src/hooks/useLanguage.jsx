@@ -35,6 +35,7 @@ const translations = {
         projectDesc1: `A collaborative work, where we decided to develop a friendly website based on a cinema. The user can watch the trailer of some movies, book a ticket or search for some snacks to order. We use HTML, CSS and JavaScript.`,
         projectDesc2: `Turisteo is a platform for travelers that offers detailed information by country. This is a collaborative work, The backend team developed an API with details of all the countries, while in the FrontEnd team we take care of the design and integration of the resources. Currently, we are focused on hosting the application.`,
         projectDesc3: `This incredible application, developed in Python, uses the tkinter library and an API with some details of Dominican citizens, helping users to obtain relevant information about the citizen, by searching for their ID.`,
+        projectDesc4: `Dynamic image search engine, using React. This search engine allows the user to search for any image, thanks to the Unsplash API.`,
         projectView: 'View demo',
         techTitle: 'Technologies',
         footerTitle: 'All rights reserved',
@@ -69,6 +70,7 @@ const translations = {
         projectDesc1: `Un trabajo colaborativo, donde decidimos desarrollar un sitio web amigable basado en un cine. El usuario puede ver el avance de algunas películas, reservar un ticket o buscar algunos snacks para pedir. Usamos HTML, CSS y JavaScript.`,
         projectDesc2: `Turisteo is a platform for travelers that offers detailed information by country. This is a collaborative work, The backend team developed an API with details of all the countries, while in the FrontEnd team we take care of the design and integration of the resources. Currently, we are focused on hosting the application.`,
         projectDesc3: `Esta increíble aplicación, desarrollada en Python, utiliza la biblioteca tkinter y una API con algunos detalles de ciudadanos dominicanos, ayudando a los usuarios a obtener información relevante del ciudadano, mediante la busqueda de su cédula.`,
+        projectDesc4: `Buscador de imágenes dinámico, elaborado en React. Este buscador permite realizar búsquedas de cualquier imagen, gracias a la API de Unsplash.`,
         projectView: 'Ver demo',
         techTitle: 'Tecnologías',
         footerTitle: 'Todos los derechos reservados',
@@ -85,24 +87,10 @@ const LanguageProvider = ({children}) => {
         setLanguage(selectedLanguage);
         setTexts(translations[selectedLanguage]);
     
-        // Store the selected language in local storage
         localStorage.setItem('language', selectedLanguage);
       };
 
-    /*const handleLanguage = (e) => {
-        const selectedLanguage = e.target.value;
-
-        if (e.target.value === 'en'){
-            setLanguage('en');
-            setTexts(translations.en);
-        } else {
-            setLanguage('es');
-            setTexts(translations.es);
-        }
-    };*/
-
     useEffect(() => {
-        // Retrieve the language from local storage when the component mounts
         const storedLanguage = localStorage.getItem('language');
         if (storedLanguage) {
           setLanguage(storedLanguage);

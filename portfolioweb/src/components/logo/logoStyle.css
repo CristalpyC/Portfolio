@@ -3,8 +3,16 @@
     height: auto;
 }
 
-@media screen and (max-width: 220px){
+
+
+@media screen and (max-width: 420px){
     .logo__container img{
-        width: 8rem;
+        width: 7rem;
+    }
+}
+
+@media screen and (max-width: 300px){
+    .logo__container img{
+        width: 5rem;
     }
 }
