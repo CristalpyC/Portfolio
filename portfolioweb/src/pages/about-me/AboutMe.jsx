@@ -3,12 +3,14 @@ import profilePic from '../../imgs/fondo-cv-opcion2.png';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import LanguageContext from '../../hooks/useLanguage';
 import { useContext } from 'react';
+import { Zoom } from "react-awesome-reveal";
 
 export const AboutMe = () => {
   const {texts} = useContext(LanguageContext);
 
   return (
     <div id='about__container'>
+      <Zoom>
       <div className="profilepic__container">
           <img src={profilePic} alt="profile pic" />
       </div>
@@ -25,6 +27,7 @@ export const AboutMe = () => {
           <hr />
           <a href="https://drive.google.com/file/d/1BR6sJpGZYbW1NanQIbqhQmibyyfWl_Ir/view?usp=sharing"><button>{texts.cvTitle}</button></a>
       </div>
+      </Zoom>
     </div>
   )
 }

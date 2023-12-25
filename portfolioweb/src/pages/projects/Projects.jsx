@@ -3,7 +3,8 @@ import { useContext } from 'react';
 import arcaneImg from '../../imgs/arcaneMockup.png';
 import turisteoImg from '../../imgs/turistMockup.png';
 import identityImg from '../../imgs/identityMockup.png';
-
+import searchImg from '../../imgs/searchmockup.png';
+import { Zoom, JackInTheBox } from "react-awesome-reveal";
 import LanguageContext from '../../hooks/useLanguage';
 
 export const Projects = () => {
@@ -12,7 +13,7 @@ export const Projects = () => {
   const title = `<${texts.projectTitle}/>`
   return (
     <div id='works__container'>
-        <h2 className='project__title'>{title}</h2>
+        <Zoom><h2 className='project__title'>{title}</h2></Zoom>
         <div className='projectinfo__container'>
             <div className="projects">
                 <div>
@@ -22,13 +23,13 @@ export const Projects = () => {
                     <a href="https://estefanisoto.github.io/"><p className='demo__title'>→ {texts.projectView}</p></a>
                 </div>
                 <div>
-                    <img src={arcaneImg} alt="" />
+                    <JackInTheBox><img src={arcaneImg} alt="" /></JackInTheBox>
                 </div>
             </div>
 
             <div className="projects2">
                  <div>
-                    <img src={turisteoImg} alt="" />
+                    <JackInTheBox><img src={turisteoImg} alt="" /></JackInTheBox>
                 </div>
                 <div>
                     <h2>{texts.projectTitle2}</h2>
@@ -46,19 +47,19 @@ export const Projects = () => {
                     <a href="https://youtu.be/jhqk-KX_Gw0"><p className='demo__title'>→ {texts.projectView}</p></a>
                 </div>
                 <div>
-                    <img src={identityImg} alt="" />
+                    <JackInTheBox><img src={identityImg} alt="" /></JackInTheBox>
                 </div>
             </div>
 
             <div className="projects2">
                  <div>
-                    <img src={turisteoImg} alt="" />
+                    <JackInTheBox><img src={searchImg} alt="" /></JackInTheBox>
                 </div>
                 <div>
                     <h2>{texts.projectTitle4}</h2>
                     <h3>{texts.projectName4}</h3>
                     <p>{texts.projectDesc4}</p>
-                    <a href="https://youtu.be/XO6gH31xtRE"><p className='demo__title'>→ {texts.projectView}</p></a>
+                    <a href="https://remarkable-liger-bc2fe5.netlify.app/"><p className='demo__title'>→ {texts.projectView}</p></a>
                 </div>
             </div>
         </div>

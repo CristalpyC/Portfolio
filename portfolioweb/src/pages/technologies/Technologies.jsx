@@ -11,13 +11,14 @@ import uiImg from '../../imgs/materialUi3dImg.png';
 import figmaImg from '../../imgs/figma3dicon.webp';
 import { useContext } from 'react';
 import LanguageContext from '../../hooks/useLanguage';
+import { Zoom } from "react-awesome-reveal";
 
 export const Technologies = () => {
   const {texts} = useContext(LanguageContext);
   const title = `<${texts.techTitle}/>`
   return (
     <div id='technologies__container'>
-      <h2 className='technologies__title'>{title}</h2>
+      <Zoom><h2 className='technologies__title'>{title}</h2></Zoom>
         <div className="tech__container" >
             <div className="technologie">
                 <img src={htmlImg} alt="" />
