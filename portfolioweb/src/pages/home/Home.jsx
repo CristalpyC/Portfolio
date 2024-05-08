@@ -1,38 +1,18 @@
 import "./homeStyle.css";
 import { DesktopMenu } from "../../components/menu/desktop/DesktopMenu";
-import user from '../../imgs/user.png';
-import user2 from '../../imgs/userAnimated2.png';
-import user3 from '../../imgs/userAnimated3.png';
-import user4 from '../../imgs/userAnimated4.png';
-import user5 from '../../imgs/userAnimated5.png';
-import { useContext, useEffect, useState } from "react";
+import user from '../../imgs/userAnimated5.png';
+import { useContext } from "react";
 import LanguageContext from "../../hooks/useLanguage";
-//import 'animate.css';
+import 'animate.css';
 
 export const Home = () => {
-  const [userImg, setUserImg] = useState(user);
-  const [currentIndex, setCurrentIndex] = useState(0);
   const {texts} = useContext(LanguageContext);
-
-  const userImages = [user, user2, user3, user4, user5];
-  
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % userImages.length);
-    }, 1000);
-
-    return () => clearInterval(intervalId); 
-  }, [userImages.length]);
-
-  useEffect(() => {
-    setUserImg(userImages[currentIndex]);
-  }, [currentIndex, userImages]);
 
   return (
     <>
       <DesktopMenu />
       <div id="home__container">
-          <div className="home__info">
+          <div className="home__info animate__animated animate__bounceInLeft">
             <h1>{texts.homeTitle}</h1>
             <div className="location__container">
               <svg className="location__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 50" fill="none">
@@ -82,12 +62,10 @@ export const Home = () => {
             </div>
           </div>
 
-          <div className="profile__container">
-              <img src={userImg} alt="" />
+          <div className="profile__container animate__animated animate__pulse">
+              <img src={user} alt="" />
           </div>
       </div>
-
-      {/*<div className="custom-cursor" ref={cursorRef} onMouseMove={mouseMove}></div> */}
     </>
   );
 }

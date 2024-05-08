@@ -7,6 +7,8 @@ import bootstrapImg from '../../imgs/bootstrap3dIcon.webp';
 import pythonImg from '../../imgs/python3dIcon.webp';
 import gitImg from '../../imgs/git3dIcon.webp';
 import sqlImg from '../../imgs/sql3dIcon.png';
+import scssImg from '../../imgs/scss-3d.png';
+import nextImg from '../../imgs/next-3d.png';
 import uiImg from '../../imgs/materialUi3dImg.png';
 import figmaImg from '../../imgs/figma3dicon.webp';
 import { useContext } from 'react';
@@ -69,6 +71,16 @@ export const Technologies = () => {
             <div className="technologie">
                 <img src={figmaImg} alt="" />
                 <h3>Figma</h3>
+            </div>
+
+            <div className="technologie">
+                <img src={scssImg} alt="" />
+                <h3>SCSS</h3>
+            </div>
+
+            <div className="technologie">
+                <img src={nextImg} alt="" />
+                <h3>Next.JS</h3>
             </div>
         </div>
     </div>

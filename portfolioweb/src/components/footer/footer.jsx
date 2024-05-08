@@ -6,7 +6,7 @@ export const Footer = () => {
   const {texts} = useContext(LanguageContext);
   return (
     <div id='footer__container'>
-      {`© 2023 Cristal Tavarez Novas. ${texts.footerTitle}.`}
+      {`© 2024 Cristal Tavárez Novas. ${texts.footerTitle}.`}
     </div>
   )
 }
