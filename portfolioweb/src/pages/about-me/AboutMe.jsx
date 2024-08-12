@@ -25,7 +25,7 @@ export const AboutMe = () => {
             </h3>
           </div>
           <hr />
-          <a href="https://drive.google.com/file/d/1_PlSyiWqFCbPDoGF7-vFgbr2e3yQ_4AP/view?usp=sharing"><button>{texts.cvTitle}</button></a>
+          <a href="https://drive.google.com/file/d/1VpJ2IrenJwcFS0p2aTqXLDjr85ytO6g1/view?usp=sharing"><button>{texts.cvTitle}</button></a>
       </div>
       </Zoom>
     </div>

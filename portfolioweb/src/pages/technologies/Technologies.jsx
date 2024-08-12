@@ -82,6 +82,11 @@ export const Technologies = () => {
                 <img src={nextImg} alt="" />
                 <h3>Next.JS</h3>
             </div>
+
+            <div className="technologie">
+                <img src="angular-icon.webp" alt="" />
+                <h3>Angular</h3>
+            </div>
         </div>
     </div>
   )

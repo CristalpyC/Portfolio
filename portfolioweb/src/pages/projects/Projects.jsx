@@ -75,6 +75,18 @@ export const Projects = () => {
                     <JackInTheBox><img src={mascotalandMockup} alt="" /></JackInTheBox>
                 </div>
             </div>
+
+            <div className="projects2">
+                 <div>
+                    <JackInTheBox><img src="ecorevMockup.png" alt="" /></JackInTheBox>
+                </div>
+                <div>
+                    <h2>{texts.projectTitle6}</h2>
+                    <h3>{texts.projectName6}</h3>
+                    <p>{texts.projectDesc6}</p>
+                    <a href="https://ecorev-shop-cristaltech.vercel.app/"><p className='demo__title'>→ {texts.projectView}</p></a>
+                </div>
+            </div>
         </div>
     </div>
   );
